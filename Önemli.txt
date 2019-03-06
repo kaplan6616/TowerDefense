@@ -1,2 +1,7 @@
 Oyun tam olarak tamamlanmamýþtýr.
 Sadece staj baþvurusu için kullanýlmak üzere bu haliyle eklenmiþtir.
+
+upgrade --- ok
+main menu --- ok
+pause menu --- ok
+health bar --- ok
