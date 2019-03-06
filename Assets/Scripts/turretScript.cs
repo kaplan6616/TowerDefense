@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class turretScript : MonoBehaviour {
-
-    
-
+    [System.Serializable]
+    public enum typeOfTurret
+    {
+        Standard,
+        StandardV2,
+        Launcher,
+        LaserBeamer
+    }
+  //  public GunsClass _turretToUpgrade;
+    public typeOfTurret type;
+    public int turretLevel;
+    buildingOnNode build;
     private Transform target;
     private enemy targetEnemy;
     [Header("SetupObjects")]
@@ -27,10 +36,12 @@ public class turretScript : MonoBehaviour {
     public float fireRate = 1f;
     private float fireCountDown = 0;
 
-
+    public bool isUpgraded=false;
 	void Start () 
     {
-        InvokeRepeating("updateTarget", 0f, 0.5f);	
+        InvokeRepeating("updateTarget", 0f, 0.5f);
+       // turretLevel = 1;
+        build = GameObject.FindGameObjectWithTag("GM").GetComponent<buildingOnNode>();
 	}
 	
     void updateTarget()
@@ -58,12 +69,8 @@ public class turretScript : MonoBehaviour {
             {
                 target = null;
             }
-        }
-        
-        
-        
-    }
-	
+        }                      
+    } 
 	void Update () 
     {
 		if(target==null)

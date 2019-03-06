@@ -155,13 +155,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc7a8aac0ce8a543b262f674aacfaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
+  turretLevel: 1
   rotationPart: {fileID: 1576619757509569477}
   bulletPrefab: {fileID: 8188789096440694857, guid: 374d9ad75710ab644a8666acf6135b48,
     type: 3}
   firePoint: {fileID: 3394192575805073621}
+  useLaser: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lr: {fileID: 0}
+  laserEffect: {fileID: 0}
+  glowLight: {fileID: 0}
   range: 40
   turnSpeed: 7
   fireRate: 0.25
+  isUpgraded: 0
 --- !u!1 &4685085376526619848
 GameObject:
   m_ObjectHideFlags: 0

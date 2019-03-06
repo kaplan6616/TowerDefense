@@ -27,19 +27,19 @@ public class cameraController : MonoBehaviour
         {
             isMoveEnable = !isMoveEnable;
         }
-        if(Input.GetKey(KeyCode.W) || Input.mousePosition.y>=Screen.height-10f)
+        if(Input.GetKey(KeyCode.W) /*|| Input.mousePosition.y>=Screen.height-10f*/)
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey(KeyCode.S) || Input.mousePosition.y < 10f)
+        if (Input.GetKey(KeyCode.S) /*|| Input.mousePosition.y < 10f*/)
         {
             transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey(KeyCode.D) || Input.mousePosition.x > Screen.width - 10f)
+        if (Input.GetKey(KeyCode.D) /* ||Input.mousePosition.x > Screen.width - 10f*/)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey(KeyCode.A) || Input.mousePosition.x < 10f)
+        if (Input.GetKey(KeyCode.A)/* || Input.mousePosition.x < 10f*/)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
         }

@@ -9759,6 +9759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc7a8aac0ce8a543b262f674aacfaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 3
+  turretLevel: 1
   rotationPart: {fileID: 1861485172478974031}
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 339114803171776254}
@@ -9771,6 +9773,7 @@ MonoBehaviour:
   range: 10
   turnSpeed: 10
   fireRate: 1
+  isUpgraded: 0
 --- !u!120 &4917806469071020742
 LineRenderer:
   m_ObjectHideFlags: 0
