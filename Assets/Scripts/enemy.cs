@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemy : MonoBehaviour {
     [Header("Enemy Attributes") ]
     public float startSpeed = 10f;
     private float speed = 10;
-    public float health = 100;
+    public float startHealth = 100;
+    private float health;
     public int moneyGainFromEnemy=50;
     public GameObject deathEffect;
 
@@ -14,10 +16,14 @@ public class enemy : MonoBehaviour {
     private Transform targetPoint;
     private int currentPointIndex = 0;
 
+    [Header("HealthBarStuff")]
+    public Image healthBar;
+
 	void Start () 
     {
         targetPoint = wayPoints.points[0];
         speed = startSpeed;
+        health = startHealth;
 	}
     public void Slow(float slowAmount)
     {
@@ -46,6 +52,7 @@ public class enemy : MonoBehaviour {
     public void takeDamage(float damageAmount)
     {
         health -= damageAmount;
+        healthBar.fillAmount = health / startHealth;
         if(health<=0)
         {
             Die();
