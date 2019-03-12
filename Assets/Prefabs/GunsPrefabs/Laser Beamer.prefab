@@ -9765,7 +9765,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 339114803171776254}
   useLaser: 1
-  damageOverTime: 30
+  damageOverTime: 10
   slowAmount: 0.5
   lr: {fileID: 4917806469071020742}
   laserEffect: {fileID: 3030516546569718224}

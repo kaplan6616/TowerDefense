@@ -8,7 +8,7 @@ public class enemy : MonoBehaviour {
     public float startSpeed = 10f;
     private float speed = 10;
     public float startHealth = 100;
-    private float health;
+    public float health;
     public int moneyGainFromEnemy=50;
     public GameObject deathEffect;
 
@@ -52,11 +52,13 @@ public class enemy : MonoBehaviour {
     public void takeDamage(float damageAmount)
     {
         health -= damageAmount;
-        healthBar.fillAmount = health / startHealth;
+
         if(health<=0)
         {
             Die();
+            
         }
+        healthBar.fillAmount = health / startHealth;
     }
 
     void Die()
@@ -65,10 +67,12 @@ public class enemy : MonoBehaviour {
         GameObject go = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(go, 5f);
         Destroy(gameObject);
+        waveSpawner.alivingEnemyCount--;
     }
     void endPath()
     {
         playerStats.decreaseLives();
+        waveSpawner.alivingEnemyCount--;
         Destroy(gameObject);
     }
 }

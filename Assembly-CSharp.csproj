@@ -53,22 +53,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\gameOverScript.cs" />
-     <Compile Include="Assets\MainMenuScript.cs" />
-     <Compile Include="Assets\nodeUIScript.cs" />
-     <Compile Include="Assets\PauseMenuScript.cs" />
+     <Compile Include="Assets\FadeScript.cs" />
      <Compile Include="Assets\Scripts\buildingOnNode.cs" />
      <Compile Include="Assets\Scripts\buildMenager.cs" />
      <Compile Include="Assets\Scripts\bulletScript.cs" />
      <Compile Include="Assets\Scripts\cameraController.cs" />
+     <Compile Include="Assets\Scripts\CameraHandler.cs" />
      <Compile Include="Assets\Scripts\enemy.cs" />
      <Compile Include="Assets\Scripts\GameMenager.cs" />
+     <Compile Include="Assets\Scripts\gameOverScript.cs" />
      <Compile Include="Assets\Scripts\GunsClass.cs" />
+     <Compile Include="Assets\Scripts\LevelSelectorScript.cs" />
      <Compile Include="Assets\Scripts\LiveUIScript.cs" />
+     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\marketScript.cs" />
      <Compile Include="Assets\Scripts\moneyUIScript.cs" />
+     <Compile Include="Assets\Scripts\nodeUIScript.cs" />
+     <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
      <Compile Include="Assets\Scripts\playerStats.cs" />
      <Compile Include="Assets\Scripts\turretScript.cs" />
+     <Compile Include="Assets\Scripts\WaveClass.cs" />
      <Compile Include="Assets\Scripts\waveSpawner.cs" />
      <Compile Include="Assets\Scripts\wayPoints.cs" />
      <None Include="Assets\TowerDefense\README.txt" />
